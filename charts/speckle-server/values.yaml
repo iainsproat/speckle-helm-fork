@@ -108,5 +108,4 @@ url-preview:
     enabled: true
   redis:
     enabled: true
-  # redis_address: url-preview.secretName -> redis_address
-  # redis_password: url-preview.secretName -> redis_password
+  # redis_connection_string: secretName -> redis_connection_string
