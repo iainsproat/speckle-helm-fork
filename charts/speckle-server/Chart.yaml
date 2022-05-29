@@ -17,3 +17,10 @@ version: 2.6.1-alpha.4103
 
 # Set by the build process to the correct value
 appVersion: "2.6.1-alpha.4103"
+
+dependencies:
+- name: url-preview-chart
+  version: "*"
+  repository: "oci://ghcr.io/iainsproat"
+  condition: url-preview-chart.enabled
+  alias: url-preview

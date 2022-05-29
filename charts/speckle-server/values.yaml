@@ -101,3 +101,12 @@ enable_prometheus_monitoring: false
 cert_manager_issuer: letsencrypt-staging
 
 helm_test_enabled: true
+
+url-preview:
+  enabled: true
+  networkpolicy:
+    enabled: true
+  redis:
+    enabled: true
+  # redis_address: url-preview.secretName -> redis_address
+  # redis_password: url-preview.secretName -> redis_password
