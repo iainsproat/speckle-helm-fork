@@ -30,7 +30,14 @@ spec:
             port:
               number: 80
       - pathType: Exact
-        path: "/(graphql|explorer|(auth/.*)|(objects/.*)|(preview/.*)|(api/.*))"
+        path: "/(api/(v[0-9]+)/linkpreview/.*)"
+        backend:
+          service:
+            name: speckle-server-url-preview
+            port:
+              number: 8000
+      - pathType: Exact
+        path: "/(graphql|explorer|(auth/.*)|(objects/.*)|(preview/.*)|((api/(v[0-9]+)/([^l]).*)))"  # HACK unfortunately will exclude any api beginning with 'l', e.g. /api/v2/l.*
         backend:
           service:
             name: speckle-server
